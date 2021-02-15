@@ -1,0 +1,108 @@
+@font-face {
+  font-family: Anybody;
+  src: url(./static/fonts/Anybody-Bold.woff2);
+}
+
+@font-face{
+  font-family: Anybodythink;
+  src: url(./static/fonts/Anybody-Light.woff2);
+}
+
+@font-face{
+  font-family: Anybodyblack;
+  src: url(./static/fonts/Anybody-Black.woff2);
+}
+
+body {
+  margin: 0;
+  font-family: "Anybodythink", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fefefe;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1,
+h2 {
+  font-family: "Impact";
+  font-variation-settings: "wght" 800, "wdth" 63;
+  letter-spacing: -0.04em;
+  font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: calc(45px + 76 * ((100vw - 320px) / 680));
+  color: #b2b1bb;
+  line-height: 90%;
+  opacity: 1;
+  font-weight: 200;
+}
+
+img {
+  width: 100%;
+}
+
+tr{
+  margin: 50px;
+  line-height: 140%;
+}
+
+tr:hover{
+  color: #b2b1bb;
+}
+
+button{
+    background-color:#000000;
+    color:#ffffff;
+    cursor: pointer;
+    border:none;
+    margin: 0 0.5vw;
+    font-size: calc(10px + 6 * ((100vw - 320px) / 680));
+    padding: 0.5vw 0.8vw;
+    border-radius:50px;
+}
+
+button:hover{
+  transform: scale(1.2);
+}
+
+button:focus{
+  border: none;
+  outline: none;
+}
+
+ul{
+  list-style:none;
+  }
+
+.App {
+  padding: 3vw;
+  display: felx;
+  flex-direction: column;
+}
+
+  .swal2-styled.swal2-confirm{
+    background-color: #b1b2bb !important;
+  }
+
+  .swal2-styled.swal2-cancel{
+    background-color: #000000 !important;
+  }
+

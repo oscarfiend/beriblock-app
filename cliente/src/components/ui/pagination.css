@@ -1,0 +1,56 @@
+.pagination{
+    font-family: "Impact";
+    margin-top: 2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: calc(8px + 10 * ((100vw - 320px) / 680));
+    width: 100%;
+}
+
+.pagination:hover{
+    cursor: pointer;
+}
+
+.pagination__link{
+    padding: 0.3vw;
+    align-self: center;
+    width: 2vw;
+    text-align: center;
+    background-color: #000000;
+    border-radius: 5px;
+    color:white;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: calc(3px + 10 * ((100vw - 320px) / 680));
+}
+
+.pagination__link:focus{
+    border: none;
+    outline: none;
+}
+
+a{
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+@media screen and (max-width:750px){
+    .pagination__link{
+        display: none;
+    }
+}
+
+.pagination__link--active{
+    background-color: #b1b2bb;
+}
+
+li:first-child{
+    margin-right: 2vw;
+}
+
+li:last-child{
+    margin-left: 2vw;
+}

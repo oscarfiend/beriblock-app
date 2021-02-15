@@ -1,0 +1,23 @@
+{
+  "name": "backend-node",
+  "version": "1.0.0",
+  "description": "Backend para beriblock",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "author": "Oscar Tirado",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-history-api-fallback": "^2.2.1",
+    "express-validator": "^6.9.0",
+    "mongoose": "^5.11.8"
+  }
+}
