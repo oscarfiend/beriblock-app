@@ -1,0 +1,51 @@
+version: '3.7'
+
+services:
+  backend:
+    container_name: backend
+    restart: unless-stopped
+    build: ./servidor
+    ports:
+      - '4000:4000'
+    env_file: ./servidor/variables.env
+    environment:
+      - NODE_ENV=production
+    networks:
+      - backend
+    depends_on:
+      - db
+
+  frontend:
+    container_name: frontend
+    restart: unless-stopped
+    build: ./cliente
+    environment:
+      - NODE_PATH=/app/src
+    ports:
+      - '80:80'
+    depends_on:
+      - backend
+    networks:
+      - frontend
+
+  db:
+    container_name: mongodb
+    image: mongo
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_DATABASE: node-app
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongo_data:/data/db
+      - mongo_config:/data/configdb
+    networks:
+      - backend
+
+networks:
+  backend:
+  frontend:
+
+volumes:
+  mongo_data: {}
+  mongo_config: {}
